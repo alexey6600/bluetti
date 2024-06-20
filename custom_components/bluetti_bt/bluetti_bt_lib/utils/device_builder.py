@@ -15,9 +15,10 @@ from ..devices.ep500p import EP500P
 from ..devices.ep600 import EP600
 from ..devices.ep760 import EP760
 from ..devices.ep800 import EP800
+from ..devices.ac70p import AC70P
 
 DEVICE_NAME_RE = re.compile(
-    r"^(AC60|AC180|AC180P|AC200L|AC200M|AC300|AC500|EB3A|EP500|EP500P|EP600|EP760|EP800)(\d+)$"
+    r"^(AC60|AC180|AC180P|AC200L|AC200M|AC300|AC500|EB3A|EP500|EP500P|EP600|EP760|EP800|AC70P)(\d+)$"
 )
 
 
@@ -49,6 +50,8 @@ def build_device(address: str, name: str):
         return EP760(address, match[2])
     if match[1] == "EP800":
         return EP800(address, match[2])
+    if match[1] == "AC70P":
+        return AC70P(address, match[2])
 
 
 def get_type_by_bt_name(bt_name: str):
