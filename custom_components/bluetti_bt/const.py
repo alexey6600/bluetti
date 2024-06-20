@@ -23,6 +23,7 @@ SUPPORTED_MODELS = [
     "EP500P",
     "EP600",
     "EP760",
+    "AC70P",
 ]
 
 CONTROL_FIELDS = [
