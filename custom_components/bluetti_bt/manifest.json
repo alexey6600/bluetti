@@ -1,6 +1,6 @@
 {
     "domain": "bluetti_bt",
-    "name": "Bluetti BT beta1",
+    "name": "Bluetti BT",
     "bluetooth": [
         { "local_name": "AC60*" },
         { "local_name": "AC180*" },
@@ -19,10 +19,10 @@
     "codeowners": ["@Patrick762, alex6600"],
     "config_flow": true,
     "dependencies": ["bluetooth_adapters"],
-    "documentation": "https://github.com/alexey6600/hassio-bluetti-bt-beta1",
+    "documentation": "https://github.com/alexey6600/bluetti",
     "integration_type": "device",
     "iot_class": "local_polling",
-    "issue_tracker": "https://github.com/alexey6600/hassio-bluetti-bt-beta1/issues",
+    "issue_tracker": "https://github.com/alexey6600/bluetti/issues",
     "requirements": [],
-    "version": "0.1.2"
+    "version": "0.1.3"
 }
