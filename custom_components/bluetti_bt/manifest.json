@@ -14,9 +14,10 @@
         { "local_name": "EP760*" },
         { "local_name": "EP800*" },
         { "local_name": "PBOX*" },
-        { "local_name": "AC70P*" }
+        { "local_name": "AC70*" },
+        { "local_name": "PBOX*" }
     ],
-    "codeowners": ["@Patrick762, alex6600"],
+    "codeowners": ["@Patrick762"],
     "config_flow": true,
     "dependencies": ["bluetooth_adapters"],
     "documentation": "https://github.com/alexey6600/bluetti",
@@ -24,5 +25,5 @@
     "iot_class": "local_polling",
     "issue_tracker": "https://github.com/alexey6600/bluetti/issues",
     "requirements": [],
-    "version": "0.1.4"
+    "version": "0.1.5"
 }

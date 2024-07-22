@@ -28,6 +28,7 @@ After the installation, you can manually add this repo to HACS.
 - EP760 (basic data)
 - EP800 (basic data)
 - AC70P (basic data)
+- AC180P (basic data)
 
 ### Available controls:
 If enabled in the Integration options (you need to reload the integration if you change this option):
