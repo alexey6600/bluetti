@@ -4,6 +4,8 @@ import unittest
 
 from custom_components.bluetti_bt.bluetti_bt_lib.utils.device_builder import build_device
 from custom_components.bluetti_bt.bluetti_bt_lib.devices.ac60 import AC60
+from custom_components.bluetti_bt.bluetti_bt_lib.devices.ac70 import AC70
+from custom_components.bluetti_bt.bluetti_bt_lib.devices.ac70p import AC70P
 from custom_components.bluetti_bt.bluetti_bt_lib.devices.ac180 import AC180
 from custom_components.bluetti_bt.bluetti_bt_lib.devices.ac180p import AC180P
 from custom_components.bluetti_bt.bluetti_bt_lib.devices.ac200m import AC200M
@@ -15,7 +17,6 @@ from custom_components.bluetti_bt.bluetti_bt_lib.devices.ep500p import EP500P
 from custom_components.bluetti_bt.bluetti_bt_lib.devices.ep600 import EP600
 from custom_components.bluetti_bt.bluetti_bt_lib.devices.ep760 import EP760
 from custom_components.bluetti_bt.bluetti_bt_lib.devices.ep800 import EP800
-from custom_components.bluetti_bt.bluetti_bt_lib.devices.ac70p import ac70p
 
 
 class TestDeviceBuilder(unittest.TestCase):
@@ -31,6 +32,22 @@ class TestDeviceBuilder(unittest.TestCase):
         built = build_device(bt_addr, bt_name)
 
         self.assertIsInstance(built, AC60)
+        self.assertEqual(built.address, bt_addr)
+
+    def test_build_ac70(self):
+        bt_addr = "aa:bb:cc:dd:ee:ff"
+        bt_name = "AC7056786746478"
+        built = build_device(bt_addr, bt_name)
+
+        self.assertIsInstance(built, AC70)
+        self.assertEqual(built.address, bt_addr)
+
+    def test_build_ac70p(self):
+        bt_addr = "aa:bb:cc:dd:ee:ff"
+        bt_name = "AC70P56786746478"
+        built = build_device(bt_addr, bt_name)
+
+        self.assertIsInstance(built, AC70P)
         self.assertEqual(built.address, bt_addr)
 
     def test_build_ac180(self):
@@ -119,14 +136,6 @@ class TestDeviceBuilder(unittest.TestCase):
         built = build_device(bt_addr, bt_name)
 
         self.assertIsInstance(built, EP800)
-        self.assertEqual(built.address, bt_addr)
-
-    def test_build_AC70P(self):
-        bt_addr = "aa:bb:cc:dd:ee:ff"
-        bt_name = "AC70P56786746478"
-        built = build_device(bt_addr, bt_name)
-
-        self.assertIsInstance(built, AC70P)
         self.assertEqual(built.address, bt_addr)
 
 if __name__ == '__main__':
