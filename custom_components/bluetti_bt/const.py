@@ -23,8 +23,6 @@ SUPPORTED_MODELS = [
     "EP500P",
     "EP600",
     "EP760",
-    "AC70",
-    "AC70P",
     "AC180P",
 ]
 
@@ -44,6 +42,8 @@ DIAGNOSTIC_FIELDS = [
     "max_ac_output_power",
     "max_ac_output_current",
     "bcu_version",
+    "dsp_version",
+    "arm_version",
     "safety_module_version",
     "high_voltage_module_version",
     "power_generation",
