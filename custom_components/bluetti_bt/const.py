@@ -45,6 +45,7 @@ DIAGNOSTIC_FIELDS = [
     "max_ac_output_current",
     "bcu_version",
     "dsp_version",
+    "arm_version",
     "safety_module_version",
     "high_voltage_module_version",
     "power_generation",

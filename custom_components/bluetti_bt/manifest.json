@@ -25,5 +25,5 @@
     "iot_class": "local_polling",
     "issue_tracker": "https://github.com/alexey6600/bluetti/issues",
     "requirements": [],
-    "version": "0.1.7"
+    "version": "0.1.8"
 }
