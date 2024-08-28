@@ -28,7 +28,6 @@ class AC200L(ProtocolV1Device):
         self.struct.add_decimal_field("pack_voltage", 98, 2)  # Full pack voltage
         self.struct.add_uint_field("pack_battery_percent", 99)
         self.struct.add_decimal_array_field("cell_voltages", 105, 16, 2)  # internal
-        self.struct.add_version_field("pack_bms_version", 201)
 
         # Controls
         self.struct.add_bool_field("power_off", 3060)
@@ -40,9 +39,12 @@ class AC200L(ProtocolV1Device):
 
     @property
     def polling_commands(self) -> List[ReadHoldingRegisters]:
-        return self.struct.get_read_holding_registers(
-            filter=lambda address: address <= 90 or address >= 256 # pack_polling_commands
-        )
+        return super().polling_commands + [
+            ReadHoldingRegisters(70, 5),
+            ReadHoldingRegisters(86, 3),
+            ReadHoldingRegisters(92, 1),
+            ReadHoldingRegisters(3060, 2),
+        ]
 
     @property
     def writable_ranges(self) -> List[range]:
@@ -51,6 +53,8 @@ class AC200L(ProtocolV1Device):
     @property
     def pack_polling_commands(self) -> List[ReadHoldingRegisters]:
         return [
-            ReadHoldingRegisters(91, 37),
-            ReadHoldingRegisters(201, 2),
+            ReadHoldingRegisters(91, 2),
+            ReadHoldingRegisters(96, 1),
+            ReadHoldingRegisters(98, 2),
+            ReadHoldingRegisters(105, 16)
         ]

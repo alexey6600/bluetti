@@ -10,27 +10,25 @@ This integration is provided without any warranty or support by Bluetti (unfortu
 
 ## Installation
 To install this integration, you first need [HACS](https://hacs.xyz/) installed.
-After the installation, you can use this button to install the integration:
-
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Patrick762&repository=hassio-bluetti-bt&category=integration)
+After the installation, you can manually add this repo to HACS.
 
 ### Supported devices:
 
 - AC60
-- AC70 (basic data)
-- AC70P (untested)
 - AC180 (basic data)
-- AC180P (tested)
+- AC180P (basic data)
 - AC200L (untested)
 - AC200M
 - AC300 (tested)
-- AC500 (tested)
+- AC500
 - EB3A
 - EP500
 - EP500P
 - EP600 (tested)
 - EP760 (basic data)
 - EP800 (basic data)
+- AC70P (basic data)
+- AC180P (basic data)
 
 ### Available controls:
 If enabled in the Integration options (you need to reload the integration if you change this option):
